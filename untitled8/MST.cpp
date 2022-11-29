@@ -5,7 +5,6 @@ using namespace std;
 MST::MST(const string &inFile) {
     int weight;
     string line;
-    //ifstream input(R"(Z:\Labs\untitled8\test.txt)");
     ifstream input;
     input.open(inFile);
     if(!input)
@@ -88,7 +87,6 @@ int MST::getEdges() const {
 }
 
 void MST::printGraph(const string &outFile) {
-    //ofstream output(R"(Z:\Labs\untitled8\out.txt)");
     ofstream output;
     output.open(outFile);
     for (int i = 0; i < numVerts; i++) {
@@ -104,7 +102,6 @@ void MST::printGraph(const string &outFile) {
 void MST::draw_graph(const string& FileName1, const string& FileName2) {
     ofstream output;
     output.open(FileName1);
-    //ofstream output(R"(Z:\Labs\untitled8\d.dot)");
     output << "graph ER { ";
     for (int i = 0; i < numVerts-1; i++) {
         for (int j = i; j < numVerts; j++)
@@ -120,7 +117,6 @@ void MST::draw_graph(const string& FileName1, const string& FileName2) {
 
     ofstream output2;
     output2.open(FileName2);
-    //ofstream output2(R"(Z:\Labs\untitled8\d1.dot)");
     output2 << "graph ER { ";
     for (int i = 0; i < numVerts-1; i++) {
         for (int j = i; j < numVerts; j++)
